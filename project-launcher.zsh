@@ -15,6 +15,7 @@ PROJECTS=(
   zshrc       "$HOME/.zshrc"
   ssh         "$HOME/.ssh"
   claude      "$HOME/.claude"
+  download    "$HOME/Downloads"
 )
 
 # プロジェクトパス解決（未登録ならパスとして扱う）
