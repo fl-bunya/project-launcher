@@ -94,13 +94,6 @@ compdef _complete_projects g
 i() {
   local path
   path="$(_project_path_or_usage i "$1")" || { echo "$path"; return 1; }
-  /usr/bin/osascript -e "
-    tell application \"iTerm\"
-      create window with default profile
-      tell current session of current window
-        write text \"cd '$path'\"
-      end tell
-    end tell
-  "
+  /usr/bin/open -n -a "iTerm" "$path"
 }
 compdef _complete_projects i
