@@ -90,6 +90,14 @@ g() {
 }
 compdef _complete_projects g
 
+# f = Finder
+f() {
+  local path
+  path="$(_project_path_or_usage f "$1")" || { echo "$path"; return 1; }
+  /usr/bin/open "$path"
+}
+compdef _complete_projects f
+
 # i = iTerm（新しいウィンドウで開く）
 i() {
   local path
